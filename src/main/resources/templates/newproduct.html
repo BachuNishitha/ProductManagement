@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+      <head>
+      <meta charset="utf-8"/>
+      <title>FILL DETAILS</title>
+      </head>
+	<div align="center">
+	<body>
+        <form action="#" th:action="@{/save}" th:object="${product}"
+            method="post">
+ 
+            <table border="0" cellpadding="10">
+                <tr>             
+                    <td>idproduct:</td>
+                    <td>
+                        <input type="text" th:field="*{idproduct}" readonly="readonly" />
+                    </td>
+                </tr>        
+                <tr>             
+                    <td>name:</td>
+                    <td>
+                        <input type="text" th:field="*{name}" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>branch:</td>
+                    <td><input type="text" th:field="*{branch}" /></td>
+                </tr>
+
+                    <td>Price:</td>
+                    <td><input type="text" th:field="*{price}" /></td>
+                </tr>                            
+              
+            </table>                 
+	</form>
+	</body>
+	</div>
+</html>
